@@ -10,7 +10,13 @@
 		select * from sample where id = #{id}
 	</select>
 	<insert id="addSample">
-		insert into Sample(id, pw) values #{id}, #{pw}
+		insert into Sample (id, pw) values (#{id}, #{pw})
 	</insert>
+	<update id="updateSample">
+		update sample set pw=#{pw} where id=#{id}
+	</update>
+	<delete id="deleteSample">
+		delete from sample where id=#{id}
+	</delete>
 </mapper>
 <!-- namespace나 해당 명령의 id는 중복되면 절대 안됨 -->

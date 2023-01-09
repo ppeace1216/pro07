@@ -20,7 +20,7 @@
 		<c:forEach items="${sampleList }" var="sample" varStatus="status">
 		<li>
 			<span>${status.count }</span>,
-			<span>${sample.id }</span>,
+			<span><a href="/detail.jsp?id=${sample.id }">${sample.id }</a></span>,
 			<span>${sample.pw }</span>
 		</li>
 		</c:forEach>

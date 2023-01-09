@@ -210,15 +210,27 @@
 		    <artifactId>jackson-databind</artifactId>
 		    <version>2.9.4</version>
 		</dependency>
-		
-				<!-- mapper -->
+		<!-- jackson-annotations -->
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-annotations</artifactId>
+		    <version>2.9.4</version>
+		</dependency>
+		<!-- jackson-mapper-asl -->
 		<dependency>
 		    <groupId>org.codehaus.jackson</groupId>
 		    <artifactId>jackson-mapper-asl</artifactId>
 		    <version>1.9.13</version>
 		</dependency>
 		
-				<!-- 스프링을 활용한 비밀번호 암호화(security crypto) 필요한 라이브러리 core, web, config -->
+		<!-- mapper -->
+		<dependency>
+		    <groupId>org.codehaus.jackson</groupId>
+		    <artifactId>jackson-mapper-asl</artifactId>
+		    <version>1.9.13</version>
+		</dependency>
+		
+		<!-- 스프링을 활용한 비밀번호 암호화(security crypto) 필요한 라이브러리 core, web, config -->
 		<dependency>
 		    <groupId>org.springframework.security</groupId>
 		    <artifactId>spring-security-core</artifactId>

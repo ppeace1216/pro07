@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+"-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="user">
+	<!-- 회원 목록 -->
+	<select id="userList" resultType="kr.go.rda.dto.UserDTO">
+		select * from user
+	</select>
+	<!-- 회원 정보 보기 -->
+	<select id="userDetail" resultType="kr.go.rda.dto.UserDTO">
+		select * from user where id = #{id}
+	</select>
+	<!-- 회원 가입 -->
+	<insert id="joinUser">
+		insert into user values (#{id}, #{pw}, #{name}, #{birth}, #{tel}, #{email}, now())
+	</insert>
+	<!-- 로그인 -->
+	<select id="login" resultType="kr.go.rda.dto.UserDTO">
+		select id, pw, name from user where id = #{id }
+	</select>
+	<!-- 회원 정보 수정 -->
+	<update id="userUpdate">
+		update user set pw=#{pw }, name=#{name }, birth=#{birth }, email=#{email }, tel=#{tel } where id=#{id }
+	</update>
+	<!-- 회원 탈퇴 -->
+	<delete id="userDelete">
+		delete from user where id=#{id }
+	</delete>
+</mapper>
